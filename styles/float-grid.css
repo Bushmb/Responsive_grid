@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+/*clearfix*/
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+/*rules for column classes*/
+.column-3, .column-4, .column-6, .column-12 {
+  float: left;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+/*mobile pages*/
+.column-3, .column-4, .column-6, .column-12 {
+  width: 100%;
+}
+
+
+/*not mobile pages, grid*/
+@media only screen and (min-width: 640px) {
+  
+  .column-3 {
+    width: 25%;
+  }
+  .column-4 {
+    width: 33.33%;
+  }
+  .column-6 {
+    width: 50%;
+  }
+  .column-12 {
+    width: 100%;
+  }
+}
